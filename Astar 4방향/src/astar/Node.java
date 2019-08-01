@@ -1,0 +1,112 @@
+package astar;
+
+import javax.swing.JButton;
+
+class Node {
+	JButton button;
+	public static final int COST = 1;
+	boolean road;
+	boolean start;
+	boolean end;
+	Node parent;
+	int x, y, g, h, f;
+	
+	public Node(JButton button, int x, int y) {
+
+		this.button = button;
+		road = true;
+		this.x = x;
+		this.y = y;
+	}
+
+	public boolean isRoad() {
+		return road;
+	}
+
+	public void setRoad(boolean road) {
+		this.road = road;
+	}
+
+	public boolean isStart() {
+		return start;
+	}
+
+	public void setStart(boolean start) {
+		this.start = start;
+	}
+
+	public boolean isEnd() {
+		return end;
+	}
+
+	public void setEnd(boolean end) {
+		this.end = end;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+
+	public int getG() {
+		return g;
+	}
+
+	public void setG(int g) {
+		this.g = g;
+	}
+
+	public int getH() {
+		return h;
+	}
+
+	public void setH(int h) {
+		this.h = h;
+	}
+
+	public int getF() {
+		return f;
+	}
+
+	public void setF(int f) {
+		this.f = f;
+	}
+
+	public JButton getButton() {
+		return button;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+
+	@Override
+	public String toString() {
+		// return this.road==true? "[ x: "+x+" y: "+y+" g :"+g+" h :"+h+" f :"+f+" ]" :
+		// "X";
+		return this.road == true ? "O" : "X";
+	}
+
+	public Node getParent() {
+		// TODO Auto-generated method stub
+		return parent;
+	}
+
+	public void setParent(Node parent) {
+		this.parent = parent;
+	}
+
+}
